@@ -1,0 +1,149 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>PI day</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/baseCSS.css">
+    <link rel="stylesheet" href="css/pages/admin/styles.css">
+  
+    
+    <!--
+    <link href="css/bootstrap/css/custom/bootstrap-scaffolding.min.css" rel="Stylesheet" />
+        -->
+</head>
+
+<body>
+  
+  <div id="main">
+	
+
+
+      <div id="divNotLoggedIn" style="display: none;">
+
+
+        <div class='form-inline'>
+          <div class="form-group">
+            <label class="sr-only" for="txtUsername">Username</label>
+            <input type="email" class="form-control" id="txtUsername" placeholder="Enter username" maxlength="25" >
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="txtPassword">Password</label>
+            <input type="password" class="form-control" id="txtPassword" placeholder="Password" maxlength="25" >
+          </div>
+          <button type="submit" id='btnLogin' class="btn btn-primary" 
+          data-bind='click: loginClicked' 
+          data-loading-text="Loading ...">Sign in</button>
+        </div>
+
+
+        <label id="lblInvalidLogin" >Incorrect username or password</label>
+
+
+      </div>
+
+
+      <div id="divLoggedIn" style="display: none;">
+        Welcome <label data-bind="text: loggedInUser"></label>
+        
+        <button id='btnLogout' class='btn btn-link'  data-bind='click: logoutClicked'>Log out</button>
+      </div>
+
+      <div style='height: 15px;'>&nbsp;</div>
+
+      <!-- leaderboard -->
+
+      <table id='tblLeaderboard' cellpadding='6' data-bind='visible: displayControls'>
+            <thead>
+              <tr>
+                
+                <th style='text-align: left;'>Name</th>
+                <th>Votes</th>
+                <th colspan="3">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody data-bind='foreach: persons' >
+
+
+              <tr>
+
+                <td >
+                  <label data-bind='text: name'></label>
+                          
+                        </td>
+                        <td style="text-align: center;">
+
+                          
+                          <label data-bind='text: votes' style='padding-top: 5px;'></label>
+                        
+                      </td>
+                      <td>
+                        
+                         <input type='text' class='votesTxtBx form-control' maxlength="3" 
+                          data-bind='
+                            value: votesToAdd
+
+                            '
+                         />                     
+                      </td>
+                      <td>
+
+                        <button type="button" class="btn btn-primary"
+                          data-bind='text: addVotesToText,
+                            click: $root.addVotesHandler'
+                        />
+                      </td>
+                      <td style='padding-left: 90px;'>
+
+                        <i class="glyphicon glyphicon-remove" data-bind='click: $root.deletePersonHandler'></i> 
+                      </td>
+                    </tr>
+                  </tbody>
+
+                  <tfoot data-bind="">
+                    <tr>
+                      <td>
+
+                        <input id="txtNewName" type='text' data-bind='value: newName' class='form-control' maxlength="30" placeholder="new name" />
+                        
+
+                      </td>
+                      <td>
+
+                        <input id='txtNewPersonVotes' type='text' data-bind='
+                        value: newPersonVotes, 
+                        event: { blur: blurNewPersonHandler },
+                        ' class='votesTxtBx form-control' placeholder='votes' maxlength="3" />
+                            <!--
+                            <input type='text' data-bind='value: newPoint, event: { 
+                                blur: $root.addDataPoint 
+                                }' class='valueTxtBx' maxlength="3" />
+                              -->      
+                            </td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+
+
+<!-- this unused button needs to be here in order for focus to go somewhere on the page, yet for focus to still be on the page, otherwise jquery.focus() won't work 
+-->
+<button id='btnUnusedButton' class='btn btn-link'>&nbsp;</button>
+
+  </div>
+
+  <script data-main="js/pages/admin/script" src="js/lib/requireJS/require.js" ></script>
+
+
+
+</body>
+
+</html>

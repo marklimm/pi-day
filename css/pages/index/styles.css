@@ -1,0 +1,87 @@
+
+body{
+	background-color: #f7f7f7;
+}
+
+ label {
+	
+	padding-top: 3px;
+
+}
+
+div#divCountdown{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	height: 30px;
+}
+
+
+span.badge{
+	font-size: 1.4em;
+	
+
+	/*  bronze by default in case there are multiple people tied for 3rd place */
+	background-color: #eda231;
+
+	border: 2px solid #e08c0d;
+}
+
+/*  1st place */
+table#tblLeaderboard tbody tr:nth-child(1) td:first-child span{
+	background-color: #FFD700;
+	border: 2px solid #d3d310;
+}
+
+/*  2nd place */
+table#tblLeaderboard tbody tr:nth-child(2) td:first-child span{
+	background-color: #cccccc;
+	border: 2px solid #bab8b8;
+}
+
+/*  3rd place 
+table#tblLeaderboard tbody tr:nth-child(3) td:first-child span{
+	background-color: #eda231;
+	border: 2px solid #e08c0d;
+}
+*/
+
+
+
+/*
+
+div#divLeft{
+	float: left;
+
+	
+	padding: 10px;
+}
+
+
+div#divRight{
+	float: right;
+	width: 38%;
+	
+
+
+	padding: 10px;
+	
+}
+*/
+
+div#divMessages{
+
+	height: 600px;
+	overflow: auto;
+	overflow-x: hidden;
+	font-size: 0.9em;
+	text-align: left;
+}
+
+div.divMessage{
+	padding: 5px;
+}
+
+div.divMessage label{
+	font-weight: normal;
+}

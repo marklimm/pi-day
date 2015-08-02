@@ -1,0 +1,116 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>PI day</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/baseCSS.css">
+    <link rel="stylesheet" href="css/pages/index/styles.css">
+  
+    
+    <!--
+    <link href="css/bootstrap/css/custom/bootstrap-scaffolding.min.css" rel="Stylesheet" />
+        -->
+</head>
+
+<body>
+  
+  <!--
+  <div id="main">
+  -->	
+
+  <div class='container'>
+
+    <div class='row'>
+
+      <div class="col-sm-12" style='padding-bottom: 10px;'>
+
+        <div id='divCountdown'>
+        </div>
+      </div>  
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-6 col-md-5 col-md-offset-1">
+
+
+
+        <div style='height: 10px;'>&nbsp;</div>
+
+
+
+        <table id='tblLeaderboard' class='table' cellpadding='6'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th style='text-align: left;'>Name</th>
+              <th>Votes</th>
+
+            </tr>
+          </thead>
+          <tbody data-bind='foreach: { data: persons }' >
+            <tr data-bind='
+            attr: { personName: name },
+            style: { backgroundColor: backgroundShade }
+            '>
+            <td style='text-align: center;'>
+              <span class="badge" data-bind='text: rank'></span>
+            </td>
+            <td style='width: 250px; text-align: left;'>
+              <label data-bind='text: name'></label>
+
+            </td>
+            <td style="text-align: center;">
+
+
+              <label data-bind='text: votes' ></label>
+
+            </td>
+          </tr></tbody>
+
+        </table>
+
+
+
+      </div>
+      <div class="col-sm-6 col-md-5">
+
+
+        <div id="divMessages" 
+        data-bind="foreach: { data: messages, afterAdd: showMessage }">
+
+        <div class='divMessage' 
+        data-bind='style { backgroundColor: bgColor }'>
+        <label data-bind='html: text'></label>
+        <br />
+        <label data-bind='text: timestamp'></label>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+</div>
+<!--
+  </div>
+-->
+
+  <script data-main="js/pages/index/script" src="js/lib/requireJS/require.js" ></script>
+
+
+
+</body>
+
+</html>

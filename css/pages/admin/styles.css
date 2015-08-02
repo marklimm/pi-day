@@ -1,0 +1,34 @@
+
+
+div#main{
+	
+	text-align: center;
+}
+
+ label {
+	font-weight: normal;
+}
+
+
+div.form-group{
+	padding-right: 5px;
+}
+
+
+label#lblInvalidLogin{
+    display: none;
+    color: red;
+}
+
+i.glyphicon-remove{
+	color: #ff0000;
+	cursor: pointer;
+}
+
+input.votesTxtBx{
+	width: 50px;
+}
+
+table#tblLeaderboard{
+	text-align: left;
+}
