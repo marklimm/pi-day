@@ -27,7 +27,7 @@ define(['knockout', 'message', 'person', 'underscore', 'jquery', 'firebase'],
 
 
             //  Firebase data reference
-            var messagesRef = new Firebase('https://piechart.firebaseio.com/messages');
+            
 
             var bgColor = "#ffffff";
 

@@ -40,7 +40,7 @@ define(['knockout', 'person', 'messageSaver', 'personSaver', 'underscore', 'jque
 
         self.setupFirebaseAuthentication = function () {
 
-            var pieChartRef = new Firebase('https://piechart.firebaseio.com/');
+            
             self.authClient = new FirebaseSimpleLogin(pieChartRef, function (error, user) {
                 if (error) {
                     // an error occurred while attempting login
