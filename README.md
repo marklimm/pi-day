@@ -5,7 +5,7 @@ At a previous job (OPIS) there was a 3/14 "pi" day "pie in the face" contest whe
 
 The main page displays the leaderboard itself - clearly illustrating the rules that all managers in 1st, 2nd, 3rd, or last place would get a pie in the face :) - as well as a real-time "news feed" of votes as they were being tallied.  There is also a countdown timer, counting down the days, hours, minutes and seconds before the end of voting.  Firebase authentication is used to authenticate the admin
 
-There is also an admin portion for adding to the vote tallies
+Here is a screenshot of the admin interface for updating the vote tallies
 ![Image of admin_leaderboard](https://raw.githubusercontent.com/marklimm/pi-day/master/images/admin_leaderboard.png)
 
 Tech stack: knockoutJS, requireJS, firebase, underscore
